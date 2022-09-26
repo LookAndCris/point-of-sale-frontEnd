@@ -1,3 +1,7 @@
+import React, { useState } from "react";
+import { useSelector } from "react-redux";
+import { Layout, Menu } from "antd";
+import { Link } from "react-router-dom";
 import {
   HomeOutlined,
   CopyOutlined,
@@ -6,15 +10,15 @@ import {
   LogoutOutlined,
   MenuUnfoldOutlined,
   MenuFoldOutlined,
+  ShoppingCartOutlined,
 } from "@ant-design/icons";
-import { Layout, Menu } from "antd";
-import { Link } from "react-router-dom";
 import "../styles/DefaultLayout.css";
-import React, { useState } from "react";
 
 const { Header, Sider, Content } = Layout;
 
 const DefaultLayout = ({ children }) => {
+  // useSelector is a hook that allows you to extract data from the Redux store state, using a selector function.
+  const { cartItems } = useSelector((state) => state.rootReducer);
   // useSate hook
   const [collapsed, setCollapsed] = useState(false);
 
@@ -62,6 +66,10 @@ const DefaultLayout = ({ children }) => {
               onClick: () => setCollapsed(!collapsed),
             }
           )}
+          <div className="cart-item d-flex jusitfy-content-space-between flex-row">
+            <p>{cartItems.length}</p>
+            <ShoppingCartOutlined />
+          </div>
         </Header>
         {/* Esta es la zona de contenido  👇*/}
         <Content
