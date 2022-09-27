@@ -173,10 +173,23 @@ const ItemPage = () => {
             </Form.Item>
             <Form.Item name="category" label="Category">
               <Select>
-                <Select.Option value="1">Option 1</Select.Option>
-                <Select.Option value="2">Option 2</Select.Option>
-                <Select.Option value="3">Option 3</Select.Option>
-                <Select.Option value="4">Option 4</Select.Option>
+                <Select.Option value="medicamentos">Medicamentos</Select.Option>
+                <Select.Option value="medicamentos-no-efp">
+                  Medicamentos no NFP's
+                </Select.Option>
+                <Select.Option value="dermocosmetica">
+                  Dermocosmética
+                </Select.Option>
+                <Select.Option value="deporte-ortopedia">
+                  Deporte - Ortopedia
+                </Select.Option>
+                <Select.Option value="nutricion">Nutrición</Select.Option>
+                <Select.Option value="higiene-corporal">
+                  Higiene corporal
+                </Select.Option>
+                <Select.Option value="parafarmacia-otros">
+                  Parafarmacia - otros
+                </Select.Option>
               </Select>
             </Form.Item>
             <div className="d-flex justify-content-end">

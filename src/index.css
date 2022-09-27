@@ -23,3 +23,20 @@ body {
   width: 6rem;
   height: 6rem;
 }
+
+.category{
+  border: 2px solid gray;
+  margin-right: 25px;
+  margin-bottom: 25px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.category img{
+  margin-left: 10px;
+}
+
+.category-active{
+  border: 2px solid green;
+  background-color: azure;
+}
