@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import DefaultLayout from "../components/DefaultLayout";
+import axios from "axios";
 import { Col, Row } from "antd";
 import { useDispatch } from "react-redux";
 import ItemList from "../components/ItemList";
@@ -14,20 +15,21 @@ const Homepage = () => {
       try {
         //Muestra el spinner
         dispatch({ type: "SHOW_LOADER" });
-        const response = await fetch(
+        const { data } = await axios.get(
           "http://localhost:8080/api/v1/items/get-item"
         );
-        const data = await response.json();
         console.log(data);
         setItems(data);
         //Oculta el spinner
         dispatch({ type: "HIDE_LOADER" });
       } catch (error) {
         console.log(error);
+        //Oculta el spinner
+        dispatch({ type: "HIDE_LOADER" });
       }
     };
     getAllItems();
-  }, []);
+  }, [dispatch]);
   return (
     <>
       <DefaultLayout>
