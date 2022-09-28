@@ -32,6 +32,10 @@ body {
   cursor: pointer;
 }
 
+.category h6{
+  margin-bottom: 0px;
+}
+
 .category img{
   margin-left: 10px;
 }
@@ -39,4 +43,33 @@ body {
 .category-active{
   border: 2px solid green;
   background-color: azure;
+}
+
+/* Register page */
+.register{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+}
+
+.register input{
+  width: 400px;
+}
+
+.register-form{
+  background-color: rgba(101, 138, 169, 0.45);
+  padding: 20px;
+  box-shadow: rgba(0,0,0,0.35) 0px 5px 15px;
+}
+
+.register-form h2 {
+  padding: 10px;
+  text-align: center;
+}
+
+.register-form h3{
+  margin-top: -10px;
+  text-align: center;
 }

@@ -50,15 +50,22 @@ const DefaultLayout = ({ children }) => {
             <Link to="/">Home</Link>
           </Menu.Item>
           <Menu.Item key="/bills" icon={<CopyOutlined />}>
-            <Link to="/bills">Bills</Link>
+            <Link to="/bills">Facturación</Link>
           </Menu.Item>
           <Menu.Item key="/items" icon={<UnorderedListOutlined />}>
-            <Link to="/items">Items</Link>
+            <Link to="/items">Productos</Link>
           </Menu.Item>
           <Menu.Item key="/customers" icon={<UserOutlined />}>
             <Link to="/customers">Customers</Link>
           </Menu.Item>
-          <Menu.Item key="/logout" icon={<LogoutOutlined />}>
+          <Menu.Item
+            key="/logout"
+            icon={<LogoutOutlined />}
+            onClick={() => {
+              localStorage.removeItem("auth");
+              navigate("/login");
+            }}
+          >
             Logout
           </Menu.Item>
         </Menu>
