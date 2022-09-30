@@ -20,8 +20,6 @@ const ItemPage = () => {
         "http://localhost:8080/api/v1/items/get-item"
       );
       setItems(data);
-      console.log(data);
-      setItems(data);
       //Oculta el spinner
       dispatch({ type: "HIDE_LOADER" });
     } catch (error) {
@@ -184,9 +182,8 @@ const ItemPage = () => {
                   Deporte - Ortopedia
                 </Select.Option>
                 <Select.Option value="nutricion">Nutrición</Select.Option>
-                <Select.Option value="higiene-corporal">
-                  Higiene corporal
-                </Select.Option>
+                <Select.Option value="infantil">Infantil</Select.Option>
+                <Select.Option value="higiene">Higiene</Select.Option>
                 <Select.Option value="parafarmacia-otros">
                   Parafarmacia - otros
                 </Select.Option>

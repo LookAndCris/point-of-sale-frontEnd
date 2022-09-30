@@ -31,7 +31,11 @@ const Homepage = () => {
       imageURL: "https://img.icons8.com/office/452/heart-with-pulse.png",
     },
     {
-      name: "higiene-corporal",
+      name: "infantil",
+      imageURL: "https://img.icons8.com/office/452/baby-bottle.png",
+    },
+    {
+      name: "higiene",
       imageURL: "https://img.icons8.com/office/452/electric-toothbrush.png",
     },
     {

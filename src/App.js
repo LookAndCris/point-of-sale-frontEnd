@@ -1,8 +1,10 @@
 import "antd/dist/antd.min.css";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import CartPage from "./pages/CartPage";
 import Homepage from "./pages/Homepage";
+import BillsPage from "./pages/BillsPage";
 import ItemPage from "./pages/ItemPage";
+import CustomersPage from "./pages/CustomersPage";
+import CartPage from "./pages/CartPage";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
 
@@ -20,10 +22,26 @@ function App() {
             }
           />
           <Route
+            path="/bills"
+            element={
+              <ProtectedRoute>
+                <BillsPage />
+              </ProtectedRoute>
+            }
+          />
+          <Route
             path="/items"
             element={
               <ProtectedRoute>
                 <ItemPage />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/customers"
+            element={
+              <ProtectedRoute>
+                <CustomersPage />
               </ProtectedRoute>
             }
           />
